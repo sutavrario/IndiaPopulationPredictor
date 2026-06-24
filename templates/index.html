@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>India Population Predictor</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f7ff;
+            text-align: center;
+            padding: 50px;
+        }
+        .box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            width: 400px;
+            margin: auto;
+            box-shadow: 0 0 15px #ccc;
+        }
+        input, button {
+            padding: 12px;
+            width: 90%;
+            margin: 10px;
+            font-size: 16px;
+        }
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+        }
+        h2 {
+            color: #2563eb;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>India Population Predictor</h1>
+
+        <form method="POST">
+            <input type="number" name="year" placeholder="Enter upcoming year" required>
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction %}
+            <h2>{{ prediction }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
